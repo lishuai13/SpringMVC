@@ -1,0 +1,6 @@
+# Project exclude paths
+/demo1/target/
+/demo-annotation/target/
+/out/
+/servlet-demo/target/
+/ssm-demo/target/

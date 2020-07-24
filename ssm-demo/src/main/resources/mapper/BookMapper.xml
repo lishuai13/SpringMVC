@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定mapper接口-->
+<mapper namespace="dao.BookMapper">
+    <resultMap id="result" type="book">
+        <result property="bookID" column="book_ID"/>
+        <result property="bookName" column="book_name"/>
+        <result property="bookCount" column="book_counts"/>
+        <result property="detail" column="detail"/>
+        <result property="image" column="image"/>
+    </resultMap>
+
+    <select id="queryAll" resultMap="result">
+        select * from ssmbuild.books;
+    </select>
+
+    <delete id="delete" parameterType="_int">
+        delete from ssmbuild.books where book_ID=#{id};
+    </delete>
+
+    <insert id="add" parameterType="book">
+        insert into ssmbuild.books (book_name, book_counts, detail,image)
+        values (#{bookName},#{bookCount},#{detail},#{image});
+    </insert>
+
+    <update id="update" parameterType="book">
+        update ssmbuild.books set book_ID=#{bookID}, book_name =#{bookName},book_counts=#{bookCount},
+        detail = #{detail} ,image=#{image} where book_ID = #{bookID};
+    </update>
+
+    <select id="select" resultMap="result">
+        select * from ssmbuild.books where book_ID=#{id};
+    </select>
+</mapper>

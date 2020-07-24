@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath:spring-config.xml"/>
+
+    <!--配置实现dao层动态注入，且带上sqlSessionFactory-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--注入sqlSessionFactory-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--扫描dao层-->
+        <property name="basePackage" value="dao"/>
+    </bean>
+
+    <bean id="bookServiceImpl" class="service.BookServiceImpl">
+        <property name="bookMapper" ref="bookMapper"/>
+    </bean>
+</beans>
