@@ -9,10 +9,11 @@
         <module name="servletdemo" />
         <module name="ssm-demo" />
         <module name="demo1" />
-        <module name="spring-redis" />
         <module name="demo-annotation" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="spring-redis" target="11.0.2" />
+    </bytecodeTargetLevel>
   </component>
 </project>

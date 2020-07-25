@@ -13,7 +13,6 @@
         <module>demo1</module>
         <module>demo-annotation</module>
         <module>ssm-demo</module>
-        <module>spring-redis</module>
     </modules>
 
     <build>
