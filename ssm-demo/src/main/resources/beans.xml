@@ -14,7 +14,12 @@
         <property name="basePackage" value="dao"/>
     </bean>
 
+    <!--注入service-->
     <bean id="bookServiceImpl" class="service.BookServiceImpl">
         <property name="bookMapper" ref="bookMapper"/>
+    </bean>
+
+    <!--注入出错处理类-->
+    <bean id="myExceptionHandler" class="common.MyExceptionHandler">
     </bean>
 </beans>

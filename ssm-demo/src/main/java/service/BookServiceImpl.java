@@ -2,6 +2,7 @@ package service;
 
 import dao.BookMapper;
 import entity.Book;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
 import java.util.Map;
@@ -14,6 +15,7 @@ public class BookServiceImpl implements BookService{
         this.bookMapper=bookMapper;
     }
 
+    @Cacheable(value = "testCache")
     @Override
     public List<Book> queryAll() {
         return bookMapper.queryAll();

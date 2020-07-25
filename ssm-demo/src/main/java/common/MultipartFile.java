@@ -1,6 +1,5 @@
-package controller;
+package common;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -8,8 +7,10 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 
-@Controller
-public class FileController {
+/**
+ * MultipartFile请求处理
+ */
+public class MultipartFile {
     //@RequestParam("file") 将name=file控件得到的文件封装成CommonsMultipartFile 对象
     //批量上传CommonsMultipartFile则为数组即可
     @RequestMapping("/upload")

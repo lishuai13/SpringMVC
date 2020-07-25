@@ -128,5 +128,11 @@ public class BookController {
         return "redirect:/allBook";
     }
 
+    @RequestMapping("/error")
+    public String error() {
+        int i = 10/0;
+        return null;
+    }
+
 
 }

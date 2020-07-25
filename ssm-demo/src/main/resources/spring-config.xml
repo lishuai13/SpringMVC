@@ -32,6 +32,8 @@
 <!--        <constructor-arg index="0" ref="sqlSessionFactory"/>-->
 <!--    </bean>-->
 
+
+
     <!--配置声明式事务-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <constructor-arg ref="dataSource" />

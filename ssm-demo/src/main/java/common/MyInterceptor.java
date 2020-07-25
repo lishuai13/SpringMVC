@@ -1,4 +1,4 @@
-package config;
+package common;
 
 
 import org.springframework.web.servlet.HandlerInterceptor;

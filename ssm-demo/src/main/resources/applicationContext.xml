@@ -8,4 +8,5 @@
     <import resource="classpath:springMVC-config.xml"/>
     <import resource="classpath:beans.xml"/>
     <import resource="classpath:spring-config.xml"/>
+    <import resource="classpath:redis-config.xml"/>
 </beans>

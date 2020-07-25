@@ -30,6 +30,7 @@
         <div class="col-md-4 column">
             <a class="btn btn-primary" href="${pageContext.request.contextPath}/toAddBook">新增</a>
             <a class="btn btn-primary" href="${pageContext.request.contextPath}/goOut">退出</a>
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/error">触发异常</a>
         </div>
     </div>
     <div class="row clearfix">

@@ -48,7 +48,7 @@
             <!--/admin/** 拦截的是/admin/下的所有-->
             <mvc:mapping path="/**"/>
             <!--bean配置的就是拦截器-->
-            <bean class="config.MyInterceptor"/>
+            <bean class="common.MyInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>
