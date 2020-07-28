@@ -15,35 +15,49 @@
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <div class="page-header">
-                <h1>
-                    <small>书籍列表 —— 显示所有书籍</small>
-                </h1>
-            </div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <h3>
+                我的书店
+            </h3>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 column">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/toAddBook">新增</a>
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/goOut">退出</a>
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/error">触发异常</a>
+    <hr>
+    <div class="row-fluid">
+        <div class="span6">
+            <button class="btn btn-large" type="button"><a href="${pageContext.request.contextPath}/toAddBook">新增</a></button>
+            <button class="btn btn-large" type="button"><a href="${pageContext.request.contextPath}/goOut">退出</a></button>
+            <button class="btn btn-large" type="button"><a href="${pageContext.request.contextPath}/error">触发异常</a></button>
+            <form class="form-search" style="float: right" method="post" action="/find">
+                <input class="input-medium search-query" type="text" placeholder="请输入书名等相关信息" name="info"/> <button type="submit" class="btn">查找</button>
+            </form>
         </div>
     </div>
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <table class="table table-hover table-striped">
+    <hr>
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table">
                 <thead>
                 <tr>
-                    <td>封面</td>
-                    <th>书籍编号</th>
-                    <th>书籍名字</th>
-                    <th>书籍数量</th>
-                    <th>书籍详情</th>
-                    <th>操作</th>
+                    <th>
+                        封面
+                    </th>
+                    <th>
+                        书籍编号
+                    </th>
+                    <th>
+                        书籍名字
+                    </th>
+                    <th>
+                        书籍数量
+                    </th>
+                    <th>
+                        书籍详情
+                    </th>
+                    <th>
+                        操作
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,6 +76,24 @@
                 </c:forEach>
                 </tbody>
             </table>
+        </div>
+    </div>
+    <hr>
+    <div class="row-fluid" style="text-align:center;font-size: 20px">
+        <div class="span12">
+            <div class="pagination pagination-centered">
+                <ul>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/allBook/-1" style="padding: 10px">上一页</a>
+                        <a href="${pageContext.request.contextPath}/allBook/1" style="padding: 10px">1</a>
+                        <a href="${pageContext.request.contextPath}/allBook/2" style="padding: 10px">2</a>
+                        <a href="${pageContext.request.contextPath}/allBook/3" style="padding: 10px">3</a>
+                        <a href="${pageContext.request.contextPath}/allBook/4" style="padding: 10px">4</a>
+                        <a href="${pageContext.request.contextPath}/allBook/5" style="padding: 10px">5</a>
+                        <a href="${pageContext.request.contextPath}/allBook/10" style="padding: 10px">下一页</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

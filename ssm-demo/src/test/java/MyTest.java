@@ -18,12 +18,12 @@ public class MyTest {
     public void test(){
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         BookService bookServiceImpl = context.getBean("bookServiceImpl", BookService.class);
-        List<Book> books =bookServiceImpl.queryAll();
+        List<Book> books =bookServiceImpl.queryAll(0);
         for (Book book : books) {
             System.out.println(book);
         }
         System.out.println("-------------------------");
-        List<Book> books2 =bookServiceImpl.queryAll();
+        List<Book> books2 =bookServiceImpl.queryAll(0);
         for (Book book : books2) {
             System.out.println(book);
         }

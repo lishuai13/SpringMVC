@@ -3,11 +3,10 @@ package dao;
 import entity.Book;
 
 import java.util.List;
-import java.util.Map;
 
 public interface BookMapper {
 
-    List<Book> queryAll();
+    List<Book> queryAll(int number);
 
     Book select(int id);
 
@@ -16,4 +15,6 @@ public interface BookMapper {
     int add(Book book);
 
     int update(Book book);
+
+    List<Book> find(String info);
 }

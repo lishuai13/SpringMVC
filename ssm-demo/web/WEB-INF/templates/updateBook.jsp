@@ -19,11 +19,12 @@
         </div>
     </div>
     <form action="${pageContext.request.contextPath}/updateBook" enctype="multipart/form-data" method="post">
-        书籍封面：<input type="file" name="file" value="${book.image}"/>
-        书籍编号：<input type="text" name="bookID" value="${book.bookID}"/>
-        书籍名称：<input type="text" name="bookName" value="${book.bookName}"/>
-        书籍数量：<input type="text" name="bookCount" value="${book.bookCount}"/>
-        书籍详情：<input type="text" name="detail" value="${book.detail}"/>
+        书籍封面：<input type="file" name="file"/><img class="imgBox" src="../../static/img/${book.image}" alt="${book.image}"><br><br><br>
+        书籍编号：<input type="text" name="bookID" value="${book.bookID}"/><br><br><br>
+        书籍名称：<input type="text" name="bookName" value="${book.bookName}"/><br><br><br>
+        书籍数量：<input type="text" name="bookCount" value="${book.bookCount}"/><br><br><br>
+        书籍详情：<input type="text" name="detail" value="${book.detail}"/><br><br><br>
+        <input type="hidden" name="image" value="${book.image}"/>
         <input type="submit" value="提交"/>
     </form>
 </div>

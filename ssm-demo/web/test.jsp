@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: lishuai
-  Date: 2020/7/24
-  Time: 15:54
+  Date: 2020/7/28
+  Time: 9:55
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,7 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/allBook/0">首页</a>
-<a href="${pageContext.request.contextPath}/goLogin">登录</a>
+哈哈
 </body>
 </html>

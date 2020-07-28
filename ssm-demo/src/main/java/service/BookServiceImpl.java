@@ -5,7 +5,6 @@ import entity.Book;
 import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
-import java.util.Map;
 
 public class BookServiceImpl implements BookService{
 
@@ -17,8 +16,8 @@ public class BookServiceImpl implements BookService{
 
     @Cacheable(value = "testCache")
     @Override
-    public List<Book> queryAll() {
-        return bookMapper.queryAll();
+    public List<Book> queryAll(int number) {
+        return bookMapper.queryAll(number);
     }
 
     @Override
@@ -39,6 +38,11 @@ public class BookServiceImpl implements BookService{
     @Override
     public int update(Book book) {
         return bookMapper.update(book);
+    }
+
+    @Override
+    public List<Book> find(String info) {
+        return bookMapper.find(info);
     }
 
 
